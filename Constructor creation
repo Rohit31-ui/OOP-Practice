@@ -1,0 +1,46 @@
+class Car{
+    //instance variable
+    String brand;
+    int speed;
+    //constructor of a class
+    Car(String brand,int speed){
+        this.brand=brand;
+        this.speed=speed;
+    }
+    
+    public void drive(){
+       System.out.println(brand + " is driving at " + speed + " km/h");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+       Car c1=new Car("Toyato",120);
+       c1.drive();
+       
+       Car c2=new Car("BMW",140);
+       c2.drive();
+    }
+}
+
+output:-
+Toyato is driving at 120 km/h
+BMW is driving at 140 km/h
+
+
+Key Concepts:-
+1.Constructor of a class:- It is a special type of a method which is used to initialise the newly created instance of a class;
+it has properties like-
+i.Same name as class name, ii. No return type iii. It is invoked as soon as the object of a class is created
+
+2.Class :- It is a buliding block of object oriented programing, it is a blueprint of objects, it has data members and methods.
+real world example - Vehicle class,human class,Animal class;
+
+3.Object:- It is an instance of class, it is also known as a real world entity. the class has data members and methods but to access them we required to create an object of a class.
+real world example - We all are example of objects of human class,dog,cat,lion are objects of animal class,car,bike,tractor,truck all are example of vehicle class.
+
+4.this keyword:- Special refrence keyword, used to refer current object.
+Usege:-
+i.To differentiate between instance variables and local variables
+ii.To call another constructor in the same class
+iii.To pass the current object as an argument
