@@ -1,0 +1,60 @@
+// Parent Class
+class Person {
+    String name;
+    int age;
+
+    // Constructor
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    void displayPersonInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Child Class (Single Inheritance: Student inherits Person)
+class Student extends Person {
+    String course;
+
+    // Constructor
+    Student(String name, int age, String course) {
+        super(name, age); // Call parent constructor
+        this.course = course;
+    }
+
+    // Method specific to Student
+    void displayStudentInfo() {
+        displayPersonInfo(); // call parent method
+        System.out.println("Course: " + course);
+    }
+}
+
+// Main class to test
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Rohit", 21, "Computer Science");
+        s1.displayStudentInfo();
+    }
+}
+
+
+output:-
+Name: Rohit
+Age: 21
+Course: Computer Science
+
+
+What is Single Inheritance?
+In single inheritance, one class (child) inherits from exactly one parent class.
+Parent class = Base class (has common properties and methods)
+Child class = Derived class (inherits from parent and can add new features)
+
+
+Here,
+Person is the base class.
+Student is the derived class.
+Student inherits name, age, and displayPersonInfo() from Person, and adds its own course property + method.
