@@ -1,0 +1,29 @@
+class Car{
+    String brand;
+    int speed;
+    
+    public void drive(){
+       System.out.println(brand + " is driving at " + speed + " km/h");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Car c1=new Car();
+        c1.brand="Toyato";
+        c1.speed=120;
+        c1.drive();
+        
+        
+        Car c2=new Car(); //object of a class is created
+        
+        c2.brand="BMW";//values assigned
+        c2.speed=140;
+        c2.drive();//method call
+    }
+}
+
+
+output:- 
+Toyato is driving at 120 km/h
+BMW is driving at 140 km/h
