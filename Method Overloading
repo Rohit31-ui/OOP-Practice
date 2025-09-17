@@ -1,0 +1,45 @@
+class Calculator {
+    // Method 1: Add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method 2: Add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Method 3: Add two doubles
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        System.out.println("Sum of 2 integers: " + calc.add(10, 20));
+        System.out.println("Sum of 3 integers: " + calc.add(10, 20, 30));
+        System.out.println("Sum of 2 doubles: " + calc.add(5.5, 6.7));
+    }
+}
+
+Output:-
+Sum of 2 integers: 30
+Sum of 3 integers: 60
+Sum of 2 doubles: 12.2
+
+
+Concept:-
+What is Method Overloading?
+In method overloading, multiple methods in the same class can have the same name but different:
+Number of parameters
+Type of parameters
+Order of parameters
+
+The return type alone cannot differentiate overloaded methods.
+
+So, same method name add() is used but with different signatures (parameters).
+That’s called Compile-Time Polymorphism.
+
