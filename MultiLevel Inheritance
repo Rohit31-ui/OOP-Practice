@@ -1,0 +1,72 @@
+// Base class (Grandparent)
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void displayPersonInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Derived class (Parent)
+class Employee extends Person {
+    double salary;
+
+    Employee(String name, int age, double salary) {
+        super(name, age);  // calling Person constructor
+        this.salary = salary;
+    }
+
+    void displayEmployeeInfo() {
+        displayPersonInfo(); // call parent method
+        System.out.println("Salary: " + salary);
+    }
+}
+
+// Derived class (Child)
+class Manager extends Employee {
+    String department;
+
+    Manager(String name, int age, double salary, String department) {
+        super(name, age, salary); // calling Employee constructor
+        this.department = department;
+    }
+
+    void displayManagerInfo() {
+        displayEmployeeInfo(); // call parent method
+        System.out.println("Department: " + department);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Manager m = new Manager("Rohit", 30, 85000, "IT");
+        m.displayManagerInfo();
+    }
+}
+
+Output:-
+Name: Rohit
+Age: 30
+Salary: 85000.0
+Department: IT
+
+Concept:-
+What is Multilevel Inheritance?
+
+In multilevel inheritance, a class inherits from another class, which itself is also a child of another class.
+It forms a chain of inheritance.
+
+Grandparent → Parent → Child
+
+Person (base class) → has common attributes.
+Employee inherits Person.
+Manager inherits Employee.
+
